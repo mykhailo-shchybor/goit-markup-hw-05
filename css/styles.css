@@ -508,6 +508,7 @@ fill: var(--accent-color);
 		line-height: 1.1923;
 		letter-spacing: 0.03em;
 	    color: var(--primary-white-color);
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-logo:hover,
@@ -538,6 +539,7 @@ fill: var(--accent-color);
 		line-height: 1.7114;
 		letter-spacing: 0.03em;
 	    color: var(--primary-white-color);
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .footer-link:hover,
@@ -554,6 +556,7 @@ fill: var(--accent-color);
 		line-height: 1.7114;
 		letter-spacing: 0.03em;
 	    color: var(--link-color-foot);
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-link {
@@ -565,6 +568,7 @@ fill: var(--accent-color);
 	line-height: 1.7114;
 	letter-spacing: 0.03em;
 	color: var(--link-color-foot);
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-link:hover,
@@ -616,6 +620,7 @@ fill: var(--accent-color);
 
 	.social-icon-foot {
 		fill: var(--primary-white-color);
+		transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 
@@ -686,6 +691,10 @@ fill: var(--accent-color);
 	letter-spacing: 0.03em;
 	font-family: inherit;
 	color: var(--titel-text-color);
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+			color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		;
 	
 }
 
@@ -715,6 +724,34 @@ fill: var(--accent-color);
 	display: block;
 }
 
+.card {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay-card {
+	position: absolute;
+	background-color: rgba(33, 150, 243, 0.9);
+	width: 370px;
+	height: 294px;
+	padding: 63px 24px;
+	opacity: 1;
+	transform: translateY(0%);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.text-overlay {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.55;
+	letter-spacing: 0.03em;
+	color: var(--primary-white-color);
+}
+
+.portfolio-link:hover .overlay-card,
+.portfolio-link:focus .overlay-card {
+	transform: translateY(-100%);
+}
            /* Modal window */
 .backdrop {
 	position: fixed;
@@ -746,7 +783,7 @@ fill: var(--accent-color);
 		0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 		text-align: right;
-		/* transition: transform 250ms var(--timing-function); */
+		translate: ;
 }
 
 .modal-btn {
